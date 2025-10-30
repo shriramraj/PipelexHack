@@ -1,0 +1,28 @@
+# workflows/support.yaml
+name: support_qa
+inputs:
+  - name: question
+    type: string
+  - name: context
+    type: string
+nodes:
+  - id: llm_answer
+    type: llm
+    backend: blackboxai
+    parameters:
+      # Prompt keeps answers grounded in retrieved context.
+      prompt: |
+        You are a customer support agent. Use ONLY the factual context provided.
+        If the answer is not present in the context, say:
+        "I don't have that information yet. I’ll escalate this to a human."
+        
+        Context:
+        {context}
+        
+        User question:
+        {question}
+        
+        Final answer (concise, helpful, and policy-aligned):
+      temperature: 0.1
+outputs:
+  - from: llm_answer.text
