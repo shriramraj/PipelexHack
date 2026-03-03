@@ -23,8 +23,8 @@ Built for the Pipelex × BlackboxAI Hackathon, this demo showcases how structure
 ⸻
 
 🏗️ Setup
-git clone https://github.com/<your-username>/ai-support-bot.git
-cd ai-support-bot
+git clone https://github.com/shriramraj/PipelexHack.git
+cd PipelexHack
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
