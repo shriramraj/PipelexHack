@@ -27,7 +27,7 @@ git clone https://github.com/shriramraj/PipelexHack.git
 cd PipelexHack
 python3 -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
+pip install -r faqs_demo.txt
 streamlit run app.py
 
 🧩 Future Enhancements
